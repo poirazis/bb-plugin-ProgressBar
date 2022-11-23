@@ -3,14 +3,56 @@
   "metadata": {},
   "schema": {
     "name": "bb-plugin-ProgressBar",
-    "friendlyName": "bb-plugin-ProgressBar",
+    "friendlyName": "ProgressBar",
     "description": "A Progress Bar component for Budibase",
+    "styles": [ "padding", "background", "size", "border", "shadow" ],
     "icon": "Text",
     "settings": [
       {
         "type": "text",
-        "key": "text",
-        "label": "Text"
+        "key": "label",
+        "label": "Label",
+        "defaultValue": "Progress"
+      },
+      {
+        "type": "text",
+        "key": "value",
+        "label": "Value",
+        "defaultValue": 50
+
+      },
+      {
+        "type": "select",
+        "key": "labelPosition",
+        "label": "Label Position",
+        "options": [
+          { "label": "Above", "value": "above" },
+          { "label": "Left", "value": "left" }
+        ],
+        "defaultValue": "above"
+      },
+      {
+        "type": "select",
+        "key": "size",
+        "label": "Size",
+        "options" : [
+          { "label": "Small", "value": "S" },
+          { "label": "Medium", "value": "M" },
+          { "label": "Large", "value": "L"},
+          { "label": "Extra Large", "value": "XL"}
+        ],
+        "defaultValue": "M"
+      },
+      {
+        "type": "color",
+        "key": "fillColor",
+        "label": "Fill Color"
+      },
+      {
+        "type": "boolean",
+        "key": "indeterminate",
+        "label": "Indeterminate",
+        "defaulValue": false
       }
     ]
   }
